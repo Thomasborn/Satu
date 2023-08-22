@@ -1,0 +1,175 @@
+<script>
+import feather from 'feather-icons';
+import ProjectHeader from '../components/projects/ProjectHeader.vue';
+import ProjectGallery from '../components/projects/ProjectGallery.vue';
+import ProjectInfo from '../components/projects/ProjectInfo.vue';
+import ProjectRelatedProjects from '../components/projects/ProjectRelatedProjects.vue';
+
+export default {
+	name: 'Projects',
+	components: {
+		ProjectHeader,
+		ProjectGallery,
+		ProjectInfo,
+		ProjectRelatedProjects,
+	},
+	data: () => {
+		return {
+			singleProjectHeader: {
+				singleProjectTitle: 'Project Management DEKSTOP APP',
+				singleProjectDate: 'Januari 10, 2022',
+				singleProjectTag: 'Desktop App DEVELOPMENT',
+			},
+			projectImages: [
+				{
+					id: 1,
+					title: 'Kabul Project Management UI',
+					img: require('@/assets/images/app-project-1-1.png'),
+				},
+				{
+					id: 2,
+					title: 'Kabul Project Management UI',
+					img: require('@/assets/images/app-project-1.png'),
+				},
+				{
+					id: 3,
+					title: 'Kabul Project Management UI',
+					img: require('@/assets/images/app-project-1-3.png'),
+				},
+			],
+			projectInfo: {
+				clientHeading: 'About Client',
+				companyInfos: [
+					{
+						id: 1,
+						title: 'Purpose',
+						details: 'applying for assistant object oriented programming JAVA',
+					},
+					{
+						id: 2,
+						title: 'Services',
+						details: 'APP development',
+					},
+					{
+						id: 3,
+						title: 'Github',
+						details: 'https://github.com/Thomasborn/UniqFashion',
+					},
+					{
+						id: 4,
+						title: 'Phone',
+						details: '0895367265775',
+					},
+				],
+				objectivesHeading: 'Objective',
+				objectivesDetails:
+					'RECAP ALL DATA',
+				technologies: [
+					{
+						title: 'Tools & Technologies',
+						techs: [
+							'JAVA',
+							'Jasper',
+							'Neatbeans',
+							'AdobeXD',
+							'Figma'
+						],
+					},
+				],
+				projectDetailsHeading: 'Description',
+				projectDetails: [
+					{
+						id: 1,
+						details:
+							'Uniq Fashion Fashion Store Management Project Facilitate the recap and recording of each data both Users and goods and transactions.			'},
+					// {
+					// 	id: 2,
+					// 	details:
+					// 		'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+					// },
+					// {
+					// 	id: 3,
+					// 	details:
+					// 		'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+					// },
+					// {
+					// 	id: 4,
+					// 	details:
+					// 		'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+					// },
+				],
+				socialSharingsHeading: 'Share This',
+				socialSharings: [
+					{
+						id: 1,
+						name: 'Twitter',
+						icon: 'twitter',
+						url: 'https://twitter.com',
+					},
+					{
+						id: 2,
+						name: 'Instagram',
+						icon: 'instagram',
+						url: 'https://instagram.com/',
+					},
+					{
+						id: 3,
+						name: 'Facebook',
+						icon: 'facebook',
+						url: 'https://facebook.com/',
+					},
+					{
+						id: 4,
+						name: 'LinkedIn',
+						icon: 'linkedin',
+						url: 'https://linkedin.com/',
+					},
+					{
+						id: 5,
+						name: 'Youtube',
+						icon: 'youtube',
+						url: 'https://www.youtube.com/',
+					},
+				],
+			},
+			relatedProject: {
+				relatedProjectsHeading: 'Related Projects',
+				relatedProjects: [
+				
+					{
+						id: 6,
+						title: 'Web Application',
+						img: require('@/assets/images/web-project-2.png'),
+					},
+					
+				],
+			},
+		};
+	},
+	mounted() {
+		feather.replace();
+	},
+	updated() {
+		feather.replace();
+	},
+	methods: {},
+};
+</script>
+
+<template>
+	<div class="container mx-auto mt-10 sm:mt-20">
+		<!-- Project header -->
+		<ProjectHeader :singleProjectHeader="singleProjectHeader" />
+
+		<!-- Project gallery -->
+		<ProjectGallery :projectImages="projectImages" />
+
+		<!-- Project information -->
+		<ProjectInfo :projectInfo="projectInfo" />
+
+		<!-- Project related projects -->
+		<ProjectRelatedProjects :relatedProject="relatedProject" />
+	</div>
+</template>
+
+<style scoped></style>
